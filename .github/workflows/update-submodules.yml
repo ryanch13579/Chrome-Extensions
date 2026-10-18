@@ -1,0 +1,38 @@
+name: Update submodules
+
+on:
+  # Runs every hour as a fallback
+  schedule:
+    - cron: "0 * * * *"
+  # Lets you run it by hand from the Actions tab
+  workflow_dispatch:
+  # Lets an extension repo trigger it instantly after a push
+  repository_dispatch:
+    types: [submodule-updated]
+
+permissions:
+  contents: write
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repo with submodules
+        uses: actions/checkout@v4
+        with:
+          submodules: true
+
+      - name: Pull latest commit of every submodule
+        run: git submodule update --remote --recursive
+
+      - name: Commit and push if anything changed
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898732+github-actions[bot]@users.noreply.github.com"
+          if git diff --quiet; then
+            echo "Submodules already up to date."
+            exit 0
+          fi
+          git add -A
+          git commit -m "Update submodules to latest"
+          git push
