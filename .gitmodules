@@ -1,3 +1,6 @@
 [submodule "Hide YouTube Member Only video"]
 	path = Hide YouTube Member Only video
 	url = https://github.com/ryanch13579/Hide-YouTuber-Member-only-Video.git
+[submodule "YouTube-Pomodoro-Timer"]
+	path = YouTube-Pomodoro-Timer
+	url = https://github.com/ryanch13579/YouTube-Pomodoro-Timer.git
