@@ -24,7 +24,7 @@ https://github.com/user-attachments/assets/95990226-7bad-4373-8d9f-f538806d20d3
 
 ## Install
 
-Install it from the [Chrome Web Store](https://chromewebstore.google.com/detail/hide-paid-youtube-videos/kbddlgpdbbfccdahodnengjhfaaekopb), or load it from source:
+Install it from the [Chrome Web Store](https://chromewebstore.google.com/detail/anti-youtube-ai-slop/oafnefikfbmilkcgnbljaoebiaaejeke), or load it from source:
 
 1. Clone the repository, or download it as a ZIP and unzip it somewhere
    permanent:
